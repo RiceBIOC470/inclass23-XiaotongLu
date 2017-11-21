@@ -1,5 +1,4 @@
 function dx = repressilator(t,x)
-
 k = 0.1; k2 = 5; n = 4;
 
 dx = zeros(3,1);
