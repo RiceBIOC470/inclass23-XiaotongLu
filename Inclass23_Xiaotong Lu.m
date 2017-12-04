@@ -1,3 +1,19 @@
+%GB comments
+1. 70 incorrect plots. Should be generated like this:
+sol = ode23(@repressilator,[0 200], [1, 0,0]);
+hold on
+plot(sol.x, sol.y(1,:));
+plot(sol.x, sol.y(2,:));
+plot(sol.x, sol.y(3,:));
+hold off 
+legend('x1','x2','x3')
+
+2 70 incorrect plot. Please see the above plotting approach. Using this and inputting .5 for all starting concentrations will indicate that the oscillatory behavior for all genes (there are 3) is removed. One gene starts high but is gradually lost and doesn’t rebound because its levels were never high enough to initiate the subsequent gene. 
+3. 80 This questions requires you to scan through multiple parameters of k2 to capture and understand the behavior of the system. Values of k2<1 leads to dampened oscillations. Values below 0.15 remove osclliations. Values above 1 generate oscillations with a periodicity and amplitude directed by the magnitude of k2.  
+4. 100
+overall 80
+
+
 %In this directory, you will find a derivaitve function representing a
 %three gene circuit in which each gene product represses the transcription of another
 %gene in a cycle. This simple three gene circuit displays oscillations and was one
